@@ -8,10 +8,13 @@ print('spacebar : 수정하는 모서리 변경')
 print('r : 가로 세로 다시설정')
 print('방향키 위쪽 or 마우스 휠 위쪽 : 모서리 +10')
 print('방향키 아래쪽 or 마우스 휠 아래쪽 : 모서리 -10')
-rect_width,rect_height = map(int,input('가로 세로 >>> ').split())
+rect_width,rect_height = 1,1
 while rect_width%10 != 0 or rect_height%10 != 0:
+    print('')
     print('10단위로!')
-    rect_width,rect_height = map(int,input('가로 세로 >>> ').split())
+    try:
+        rect_width,rect_height = map(int,input('가로 세로 >>> ').split())
+    except:print('(오류)')
 
 #기본 세팅
 screen_width = 1200
